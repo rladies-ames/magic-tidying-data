@@ -1,0 +1,109 @@
+---
+title: "The Life Changing Magic of Tidying Data"
+author: Sam Tyner
+date: TBD (Dec 2017)
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## The Life Changing Magic of Tidying Data
+
+> "Life truly begins only after you have put your house in order."
+
+This quote is from the companion guide to Marie Kondo's #1 *New York Times* best-selling book *The Life Changing Magic of Tidying Up*, which is titled *Spark Joy: An Illustrated Master Class on the Art of Organizing and Tidying Up*.
+
+These books and this method of organization, known as the KonMari method, is all about tidying your home and your life by surrounding yourself with only the things that bring you joy. Now, we're all here because we're huge data nerds. We hoard it. We love it. But before we can *do* anything with that data, we have to *clean* and *tidy* the data.
+
+You can think of this tutorial as the companion guide to the hypothetical book *The Life Changing Magic of Tidying Data*. Let's rephrase the quote above for tidy data:
+
+> "~~Life~~ Analysis truly begins only after you have put your ~~house~~ data in order."
+
+## The KonMari Rules of Tidying Your Home  
+
+1. Commit yourself to tidying up - even though it may seem hard and it requires time and effort
+2. Imagine your ideal lifestyle - think about the house you want to live in and even sketch it out if you like drawing
+3. Finish discarding first - you can only decide where store things when you've decided what items to keep and what items to discard
+4. Tidy by category, not by location - this allows you to see everything you own and to get a grasp of just how much stuff from each category you own
+5. Follow the right order - tidy in the following order: clothes, books, papers, *komono*, and sentimental items 
+6. Ask yourself if it sparks joy - only keep something if it sparks joy in you
+
+## The KonSam Rules of Tidying Your Data
+
+Some of them are identical to KonMari's, others need some...massaging.
+
+1. Commit yourself to tidying your data - even though it may seem hard and it requires time and effort
+2. Imagine your ideal dataset - rows are observations, columns are variables; you should sketch it out ahead of time to help wrap your head around it
+3. Finish saving first - *never* alter the original data. Store it elsewhere and save *new* copies. Never overwrite!  
+4. Tidy by data type, not by data frame - determine the units in your data first that may be stored across several data frames or data objects
+5. (??)
+6. Ask yourself if it sparks inspiration (?)
+
+
+## Topic 1
+
+### Exercise 
+
+*Here's a simple exercise with an empty code chunk provided for entering the answer.*
+
+Write the R code required to add two plus two:
+
+```{r two-plus-two, exercise=TRUE}
+
+```
+
+### Exercise with Code
+
+*Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
+
+Now write a function that adds any two numbers and then call it:
+
+```{r add-function, exercise=TRUE, exercise.lines = 5}
+add <- function() {
+  
+}
+```
+
+## Topic 2
+
+### Exercise with Hint
+
+*Here's an exercise where the chunk is pre-evaulated via the `exercise.eval` option (so the user can see the default output we'd like them to customize). We also add a "hint" to the correct solution via the chunk immediate below labeled `print-limit-hint`.*
+
+Modify the following code to limit the number of rows printed to 5:
+
+```{r print-limit, exercise=TRUE, exercise.eval=TRUE}
+mtcars
+```
+
+```{r print-limit-hint}
+head(mtcars)
+```
+
+### Quiz
+
+*You can include any number of single or multiple choice questions as a quiz. Use the `question` function to define a question and the `quiz` function for grouping multiple questions together.*
+
+Some questions to verify that you understand the purposes of various base and recommended R packages:
+
+```{r quiz}
+quiz(
+  question("Which package contains functions for installing other R packages?",
+    answer("base"),
+    answer("tools"),
+    answer("utils", correct = TRUE),
+    answer("codetools")
+  ),
+  question("Which of the R packages listed below are used to create plots?",
+    answer("lattice", correct = TRUE),
+    answer("tools"),
+    answer("stats"),
+    answer("grid", correct = TRUE)
+  )
+)
+```
+
