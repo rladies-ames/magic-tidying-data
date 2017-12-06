@@ -1,8 +1,10 @@
 ---
 title: "The Life Changing Magic of Tidying Data"
 author: Sam Tyner
-date: TBD (Dec 2017)
-output: learnr::tutorial
+date: 8 December 2017
+output: 
+    learnr::tutorial:
+    css: rladies_revealjs.css
 runtime: shiny_prerendered
 ---
 
@@ -32,19 +34,37 @@ You can think of this tutorial as the companion guide to the hypothetical book *
 5. Follow the right order - tidy in the following order: clothes, books, papers, *komono*, and sentimental items 
 6. Ask yourself if it sparks joy - only keep something if it sparks joy in you
 
-## The KonSam Rules of Tidying Your Data
+## The TySam Rules of Tidying Your Data
 
 Some of them are identical to KonMari's, others need some...massaging.
 
 1. Commit yourself to tidying your data - even though it may seem hard and it requires time and effort
-2. Imagine your ideal dataset - rows are observations, columns are variables; you should sketch it out ahead of time to help wrap your head around it
+2. Imagine your ideal dataset - rows are observations, columns are variables, each type of observation is stored its own table; you should sketch it out ahead of time to help wrap your head around it
 3. Finish saving first - *never* alter the original data. Store it elsewhere and save *new* copies. Never overwrite!  
 4. Tidy by data type, not by data frame - determine the units in your data first that may be stored across several data frames or data objects
-5. (??)
-6. Ask yourself if it sparks inspiration (?)
+5. Tidy in the right order - find your observation type(s), find the corresponding variables, and arrange them so you have the ideal dataset
+6. Ask yourself if it sparks inspiration! Then you can perform analyses or make beautiful plots.
 
 
-## Topic 1
+## Commit yourself to tidying 
+
+An oft-repeated aphorism in data science is that "80% of data analysis is spent on the process of cleaning and preparing the data". That means, if you're an analyst, only 20% of your time on a project will be spent doing the things that are actually in your job description. 
+
+So you are going to need to be good at tidying, and good at doing it quickly. 
+
+## Imagine your ideal dataset 
+
+1. Each row contains one observation
+2. Each column contains one variable (and only one variable)
+3. Each type of observation is stored its own table
+
+## Finish saving first
+
+*never* alter the original data. Store it elsewhere and save *new* copies. Never overwrite!  
+4. Tidy by data type, not by data frame - determine the units in your data first that may be stored across several data frames or data objects
+5. Tidy in the right order - find your observation type(s), find the corresponding variables, and arrange them so you have the ideal dataset
+6. Ask yourself if it sparks inspiration! Then you can perform analyses or make beautiful plots.
+
 
 ### Exercise 
 
