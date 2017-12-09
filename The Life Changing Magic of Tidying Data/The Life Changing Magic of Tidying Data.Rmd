@@ -122,6 +122,7 @@ What 2 types of observations are in the data below?
 suppressMessages(library(tidyverse))
 #library(tidyverse)
 bb <- read_csv("https://raw.githubusercontent.com/tidyverse/tidyr/master/vignettes/billboard.csv")
+# bb <- read.csv("https://raw.githubusercontent.com/tidyverse/tidyr/master/vignettes/billboard.csv", stringsAsFactors = FALSE)
 head(bb)
 
 ```
@@ -156,9 +157,11 @@ First, assign an ID number to each artist-song combination. The song titles are 
 ```{r data-types-sep, exercise=TRUE, exercise.lines = 15}
 songs <- bb %>% select(artist, track, time) %>% unique
 head(songs)
+# songs <- unique(bb[,c("artist","track","time")])
 
 songs <- songs %>% mutate(songID = row_number())
 head(songs)
+# songs$songID <- 1:nrow(songs)
 
 bb <- bb %>% left_join(songs) %>% select(year, songID, artist:date.entered, wk1:wk76)
 head(bb)
